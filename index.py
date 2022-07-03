@@ -748,7 +748,7 @@ initial_html = '''<!DOCTYPE HTML>
         <body>
             <table>
                 <tr>
-                    <td class="day" colspan="10" style="text-align: center">Monday</td>
+                    <td class="day" colspan="10" style="text-align: center">Monday-Wednesday-Friday</td>
                 </tr>'''
 
 html1 = initial_html
@@ -790,7 +790,7 @@ for slot_no, slot in enumerate(even_day_evening):
     print(" ")
     html2 += '</td>\n'
 
-html1 += '<table><tr><td class="day" colspan="10" style="text-align: center">Tuesday</td></tr>'
+html1 += '<table><tr><td class="day" colspan="10" style="text-align: center">Tuesday-Thursday</td></tr>'
 html1+= '''
                 <tr>
                     <td class="time" colspan="3" style="text-align: center">8:00 - 9:30</td>
@@ -817,17 +817,17 @@ html1_file= open("1.html","w+")
 html1_file.write(html1)
 html1_file.close()
 
-html2 += '<table><tr><td class="day" colspan="10" style="text-align: center">Tuesday</td></tr>'
+html2 += '<table><tr><td class="day" colspan="10" style="text-align: center">Tuesday-Thursday</td></tr>'
 html2+= '''
                 <tr>
-                    <td colspan="3" style="text-align: center">8:00 - 9:30</td>
-                    <td colspan="3" style="text-align: center">9:30 - 11:00</td>
-                    <td colspan="3" style="text-align: center">11:00 - 12:30</td>
-                    <td style="text-align: center">12:30 - 1:00</td>
+                    <td class="time" colspan="3" style="text-align: center">1:00 - 2:30</td>
+                    <td class="time" colspan="3" style="text-align: center">2:30 - 4:00</td>
+                    <td class="time" colspan="3" style="text-align: center">4:00 - 5:30</td>
+                    <td class="time" style="text-align: center">12:30 - 1:00</td>
                 </tr>
                 <tr>'''
 for slot_no, slot in enumerate(odd_day_evening):
-    html2 += '<td colspan="3">\n'
+    html2 += '<td class="slot" colspan="3">\n'
     for index, lt in enumerate(slot):
         html2 += '\tL'+str(index+1)+': '+str(lt)+'<br>\n'
         print("ODE => Slot "+str(slot_no+1)+" -> L"+str(index+1)+": "+str(lt))
