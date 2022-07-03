@@ -1,0 +1,26 @@
+body{
+    background-color:#FFE7BF;
+    
+}
+tr{
+    font-size: 0.8rem;
+}
+td{
+    background-color: #3F4E4F;
+}
+
+.day{
+    background-color:#A27B5C;
+    font-weight:bolder;
+    font-size: 1rem;
+}
+.time{
+    background-color: #F6FBF4;
+    font-weight:bolder;
+    font-size: 0.9rem;
+}
+.slot{
+    background-color: #3F4E4F;
+    color: white;
+    font-weight:300;
+}
